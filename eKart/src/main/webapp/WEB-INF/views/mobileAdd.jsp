@@ -22,7 +22,7 @@
 <body>
 
 	<h2>Add Mobile</h2>
- <img src="<c:url value="/resources/images/logo.jpg" />"  />
+ 	<img src="<c:url value="./images/mobiles.jpg" />"  />
 	<form:form method="POST" modelAttribute="mobile" action="addMobile">
 		<table>
 			<tr>
