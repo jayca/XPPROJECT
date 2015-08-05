@@ -1,6 +1,5 @@
 package com.agile.bangalore.ekart.entities;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -17,120 +16,76 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="MobileDetails")
+@Table(name = "MobileDetails")
 public class MobileDto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Size(min=3, max=50)
+	@Size(min = 3, max = 50)
 	@Column(name = "MOBILENAME", nullable = false)
 	private String mobileName;
 
 	@NotNull
-	@DateTimeFormat(pattern="dd/MM/yyyy") 
+	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	@Column(name = "MANUFACTUREDATE", nullable = false)
 	private Date mobileManufactureDate;
 
 	@NotNull
-	@Digits(integer=8, fraction=2)
+	@Digits(integer = 8, fraction = 2)
 	@Column(name = "PRICE", nullable = false)
-	private BigDecimal price;
-	
+	private double price;
+
 	@NotEmpty
-	@Column(name = "DESCRIPTION", unique=true, nullable = false)
+	@Column(name = "DESCRIPTION", unique = true, nullable = false)
 	private String description;
-
-	
-
-	
 
 	@Override
 	public String toString() {
-		return "Mobile [id=" + id + ", mobileName=" + mobileName + ", mobileManufactureDate="
-				+ mobileManufactureDate + ", price=" + price + ", description=" + description + "]";
+		return "Mobile [id=" + id + ", mobileName=" + mobileName
+				+ ", mobileManufactureDate=" + mobileManufactureDate
+				+ ", price=" + price + ", description=" + description + "]";
 	}
-
-
-
-
 
 	public int getId() {
 		return id;
 	}
 
-
-
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
-
-
 
 	public String getMobileName() {
 		return mobileName;
 	}
 
-
-
-
-
 	public void setMobileName(String mobileName) {
 		this.mobileName = mobileName;
 	}
-
-
-
-
 
 	public Date getMobileManufactureDate() {
 		return mobileManufactureDate;
 	}
 
-
-
-
-
 	public void setMobileManufactureDate(Date mobileManufactureDate) {
 		this.mobileManufactureDate = mobileManufactureDate;
 	}
 
-
-
-
-
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-
-
-
-
-	public void setPrice(BigDecimal price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
-
-
-
-
 
 	public String getDescription() {
 		return description;
 	}
 
-
-
-
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
 
 }

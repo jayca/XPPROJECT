@@ -1,12 +1,18 @@
 package com.agile.bangalore.eKart.unittest;
+import java.util.Date;
 
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.*;
+import org.junit.Test;
+import org.mockito.Mockito;
 
 import com.agile.bangalore.ekart.dao.MobileDao;
+import com.agile.bangalore.ekart.dao.MobileDaoImpl;
+import com.agile.bangalore.ekart.entities.MobileDto;
 import com.agile.bangalore.ekart.service.MobileService;
 import com.agile.bangalore.ekart.service.MobileServiceImpl;
+
+
+
 
 public class MobileServiceTest {
 	
@@ -15,12 +21,21 @@ public class MobileServiceTest {
  
     @Before
     public void doSetup() {
-    	//mobileDao = mock(mobileDao.class);
-    	//mobileService = new MobileServiceImpl(mobileDao);
+    	
     }
     
 	@Test
 	public void addMobilesTest() {
-		Assert.assertTrue(true);
+		
+		mobileDao = Mockito.mock(MobileDaoImpl.class);
+		mobileService = new MobileServiceImpl(mobileDao);
+		MobileDto mobileDto = new MobileDto();
+		mobileDto.setMobileManufactureDate(new Date(2014, 3, 5));
+		mobileDto.setMobileName("Samsung");
+		double price = 1000.00;
+		mobileDto.setPrice(price);
+		mobileDto.setDescription("Android Kitkat Toch Phone");
+		mobileService.addmobile(mobileDto);
+		Mockito.verify(mobileDao).addMobile(mobileDto);
 	}
 }

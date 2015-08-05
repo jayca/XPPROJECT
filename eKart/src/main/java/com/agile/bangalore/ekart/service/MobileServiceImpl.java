@@ -22,7 +22,7 @@ public class MobileServiceImpl implements MobileService{
 
 	private MobileDao mobileDao;
 	@Autowired
-	MobileServiceImpl(MobileDao mobileDao)
+	public MobileServiceImpl(MobileDao mobileDao)
 	{
 		this.mobileDao = mobileDao;
 	}
