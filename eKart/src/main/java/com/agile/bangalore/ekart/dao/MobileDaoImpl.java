@@ -14,11 +14,7 @@ public class MobileDaoImpl  extends AbstractDao<Integer, MobileDto> implements  
 		persist(mobileDto);
 	}
 
-	public List<MobileDto> findMobile(String mobName) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	@SuppressWarnings("unchecked")
 	public List<MobileDto> getAllMobiles() {
 		Criteria criteria = createEntityCriteria();

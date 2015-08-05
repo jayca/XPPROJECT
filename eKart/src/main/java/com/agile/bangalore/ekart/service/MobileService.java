@@ -8,7 +8,7 @@ public interface MobileService {
 	
 	void addmobile(MobileDto mobileDto);
 	
-	List<MobileDto> findMobileByName(String name);
+	
 	
 	List<MobileDto> getAllMobile();
 

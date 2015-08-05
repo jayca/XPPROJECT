@@ -32,10 +32,6 @@ public class MobileServiceImpl implements MobileService{
 		
 	}
 
-	public List<MobileDto> findMobileByName(String name) {
-		
-		return null;
-	}
 
 	public List<MobileDto> getAllMobile() {
 		List<MobileDto> mobileList= mobileDao.getAllMobiles();
