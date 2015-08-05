@@ -1,5 +1,6 @@
 # XPPROJECT
 In this project we will be developing the eKart application
+
 Setup instructions:
 1. Install Tomcat7 from: 
 2. Install MySQL5.5.45 from: 
