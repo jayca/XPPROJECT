@@ -5,15 +5,38 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add mobile Confirmation Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>eKart :: Add mobile Confirmation</title>
+<link rel="stylesheet" type="text/css" href="<c:url value="./css/style.css" />" />
+<style>
+
+	.error {
+		color: #ff0000;
+	}
+</style>
 </head>
+
+
 <body>
-	message : ${success}
+<div id="wrapper">
+<div id="header">
+<table style="background-color:lightsteelblue;width:100%"><tr>
+<td width="10%"><img src="<c:url value="./images/logo.jpg" />" height="100" width="120" /></td>
+<td style="font-size: xx-large;;align-content:center;text-align:left">eKart :: Add Mobile Confirmation</td></tr></table>
+<table style="background-color:navy;width:100%;height:0"><tr><td></td></tr></table>
+</div>
+<div id="content">
+		message : ${success}
 	<br/>
 	<br/>
 	Go back to <a href="<c:url value='/listMobiles' />">List of All Mobiles</a>
-	
-</body>
 
+	</div>
+	<div id="footer">
+	<table style="background-color:lightsteelblue;width:100%"><tr>
+<td style="font-size: small;text-align:center">XP Conference India 2015 &copy; 2015</td></tr></table>
+	
+	</div>
+	</div>
+</body>
 </html>
