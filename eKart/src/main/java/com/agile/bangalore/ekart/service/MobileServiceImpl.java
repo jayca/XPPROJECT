@@ -20,8 +20,12 @@ import com.agile.bangalore.ekart.entities.MobileDto;
 @Transactional
 public class MobileServiceImpl implements MobileService{
 
+	private MobileDao mobileDao;
 	@Autowired
-	MobileDao mobileDao;
+	MobileServiceImpl(MobileDao mobileDao)
+	{
+		this.mobileDao = mobileDao;
+	}
 	public void addmobile(MobileDto mobileDto) {
 
 		mobileDao.addMobile(mobileDto);
