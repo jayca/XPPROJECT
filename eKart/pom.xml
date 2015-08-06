@@ -136,6 +136,18 @@
 			<version>${dbunit.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>1.2.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>1.2.3</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -151,6 +163,7 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 				</plugin>
+
 			</plugins>
 		</pluginManagement>
 		<finalName>eKart</finalName>
