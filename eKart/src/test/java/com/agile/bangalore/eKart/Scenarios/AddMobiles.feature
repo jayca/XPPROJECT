@@ -6,9 +6,11 @@ Feature: Add Mobiles to Kart
     When I add a mobile
       | Mobile Name | Manufacture Date | Price | Desciprion     |
       | Samsung     | 02/04/2011       | 10000 | Android Mobile |
+      | Google      | 02/10/2017       | 60000 | Android Mobile | 
     Then the eKart should have 1 mobile
       | Mobile Name | Manufacture Date | Price | Desciprion     |
       | Samsung     | 02/04/2011       | 10000 | Android Mobile |
+      | Google      | 02/10/2017       | 60000 | Android Mobile | 
 
   Scenario: Add Mobiles to Kart
     Given I have 0 mobiles in eKart
@@ -16,7 +18,9 @@ Feature: Add Mobiles to Kart
       | Mobile Name | Manufacture Date | Price | Desciprion     |
       | Samsung     | 02/04/2011       | 10000 | Android Mobile |
       | Nokia       | 02/04/2011       | 20000 | Windows Mobile |
+      | Google      | 02/10/2017       | 60000 | Android Mobile | 
     Then the eKart should have 1 mobile
       | Mobile Name | Manufacture Date | Price | Desciprion     |
       | Samsung     | 02/04/2011       | 10000 | Android Mobile |
       | Nokia       | 02/04/2011       | 20000 | Windows Mobile |
+      | Google      | 02/10/2017       | 60000 | Android Mobile | 
